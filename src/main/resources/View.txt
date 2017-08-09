@@ -1,0 +1,96 @@
+***********************************************************************************************************************
+
+Default port to start:- 6062
+
+Soap Web Service URL:- http://localhost:6062/AspectDmService/1.0.wsdl
+
+Rest Web Service URL:- http://localhost:6062/api/aspectDmCustomer/v1
+
+Swagger URL:- http://localhost:6062/swagger-ui.html 
+
+Post method:-
+
+http://localhost:6062/api/aspectDmCustomer/v1/empConfig
+http://localhost:6062/api/aspectDmCustomer/v1/empConfigAddress
+
+***********************************************************************************************************************
+
+Actuator:-
+
+http://localhost:6062/health
+http://localhost:6062/info
+http://localhost:6062/metrics
+http://localhost:6062/trace
+http://localhost:6062/mappings
+
+After changing the actuator port use below.
+
+User name:- admin 
+Password:- secret
+
+http://localhost:8091/actuator/info
+http://localhost:8091/actuator/health
+http://localhost:8091/actuator/metrics
+http://localhost:8091/actuator/trace
+
+***********************************************************************************************************************
+
+Eclipse configuration:-
+
+-Dspring.liveBeansView.mbeanDomain
+-Dcom.sun.management.jmxremote
+-Dcom.sun.management.jmxremote.port=9843
+-Dcom.sun.management.jmxremote.authenticate=false
+-Dcom.sun.management.jmxremote.ssl=false
+
+***********************************************************************************************************************
+
+Eclipse Builder:-
+
+<buildCommand>
+<name>org.eclipse.jdt.core.javabuilder</name>
+<arguments>
+</arguments>
+</buildCommand>
+
+***********************************************************************************************************************
+
+Sample Header:-
+
+headers.add("SourceSystemId", "dm");
+headers.add("SourceSystemUserId", "dmgrand");
+headers.add("SourceServerId", "grand");
+headers.add("trackingId", "Dm_1423"); 
+
+***********************************************************************************************************************
+
+Sonar Server:- 
+
+D:\Sonar\sonarqube-4.5.1\sonarqube-4.5.1\bin\windows-x86-64
+
+***********************************************************************************************************************
+
+Gradle:-
+
+gradlew clean build --refresh-dependencies
+gradle clean --refresh-dependencies build
+gradle clean pitest
+gradle tasks
+gradle test
+gradle bootRun
+gradlew functionalTest
+gradlew contractTest
+gradlew performanceTest
+gradle publish
+gradle assemble
+gradle sonarRunner
+gradlew sonarRunner
+gradlew contractTest
+gradlew functionalTest
+gradlew performanceTest
+
+gradlew clean build --refresh-dependencies functionalTest
+gradlew clean build --refresh-dependencies contractTest
+gradlew clean build --refresh-dependencies performanceTest
+
+***********************************************************************************************************************
